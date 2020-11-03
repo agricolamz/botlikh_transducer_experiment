@@ -1,0 +1,48 @@
+PATTERNS
+adj abs
+((adj_class[nm] (adj_root[l] | adj_root[b])) | (adj_root[r] | adj_root[a])) obl_stem[nm]  (obl_case[ngen] | obl_case[nm])
+((adj_class[m] (adj_root[l] | adj_root[b])) | (adj_root[r] | adj_root[a])) obl_stem[m]  (obl_case[ngen] | obl_case[m])
+((adj_class[an.pl.p] (adj_root[l] | adj_root[b])) | (adj_root[r] | adj_root[a])) obl_stem[pl]  (obl_case[ngen] | obl_case[nm] | obl_case[m.pl])
+((adj_class[inan.pl] (adj_root[l] | adj_root[b])) | (adj_root[r] | adj_root[a])) obl_stem[pl]  (obl_case[ngen] | obl_case[nm])
+
+PATTERN adj
+adj_root[a]
+adj_class[-an.pl.s] adj_root[l] 
+adj_root[r] adj_class[-an.pl.p]
+adj_class[-an.pl.s] adj_root[b] adj_class[-an.pl.p]
+
+LEXICON adj_root
+аруссу[r]     # local
+ечIуха[l]     # big
+ачIа[b]       # selected
+гIалхул[a]    # wild
+
+LEXICON adj_class
+<f>[nm]:й[nm]
+<n>[nm]:б[nm]  
+<m>[m]:в[m]
+<an.pl>[an.pl.p]:р[an.pl.p]  
+<an.pl>[an.pl.s]:л[an.pl.s]  
+<inan.pl>[inan.pl]:б[inan.pl]
+
+LEXICON abs
+<abs>:
+
+LEXICON obl_case
+<erg>:ди
+<dat>:й
+
+LEXICON obl_stem
+<obl.m>[m]:щу[m]
+<obl.nm>[nm]:лълъи[nm]
+<obl.pl>[pl]:лу[pl]
+
+LEXICON obl_case
+<erg>[ngen]:ди[ngen]
+<dat>[ngen]:й[ngen]
+<gen>[nm]:>лъи[nm]
+<f(gen)>[m]:й[m]
+<n(gen)>[m]:б[m]  
+<m(gen)>[m]:в[m]
+<an.pl(gen)>[m.pl]:л[m.pl]  
+<inan.pl(gen)>[m.pl]:б[m.pl]
