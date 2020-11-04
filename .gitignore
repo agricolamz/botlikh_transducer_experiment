@@ -1,4 +1,4 @@
 tsez_example.lexd
 tsez_example.twol
-*hfst
-*att
+*.hfst
+*.att
