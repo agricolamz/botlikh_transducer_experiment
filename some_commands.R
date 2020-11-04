@@ -15,7 +15,7 @@ generate_with_twol <- function(file) {
                "hfst-compose-intersect adj.lexd.hfst adj.twol.hfst > adj.hfst;",
                "hfst-fst2strings adj.hfst"), intern = TRUE)}
 
-generate_without_twol("adj.lexd") %>%
+generate_with_twol("adj.lexd") %>%
   enframe() %>% 
   mutate(form = str_extract(value, ":.*"),
          form = str_remove(form, ":"),
